@@ -24,6 +24,7 @@ warnings.filterwarnings("ignore")
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, "MESHAgents", "src"))
 
+import llm_provider as P          # provider switch — MUST precede `import config` (ollama dummy-key shim)
 import mesh_core
 from config import OPENAI_API_KEY
 from agents_bodycomp import (BodyCompChiefAgent, build_structures, detect_label,

@@ -44,12 +44,10 @@ class ModelClient:
     """Chat client; OpenAI by default, or any OpenAI-compatible endpoint (set MESH_LLM_BASE_URL)."""
 
     def __init__(self):
-        from openai import OpenAI
         from config import GPT_MODEL
-        base_url = os.getenv("MESH_LLM_BASE_URL")        # e.g. http://localhost:8000/v1 in the TRE
-        api_key = os.getenv("OPENAI_API_KEY", "dummy")
-        self.model = os.getenv("MESH_LLM_MODEL", GPT_MODEL)
-        self.client = OpenAI(api_key=api_key, base_url=base_url) if base_url else OpenAI(api_key=api_key)
+        import llm_provider as P                         # provider switch (OpenAI <-> Ollama)
+        self.model = P.chat_model(default=GPT_MODEL)
+        self.client = P.chat_client()
 
     def chat_json(self, system: str, user: str, retries: int = 2) -> Dict[str, Any]:
         """Return a parsed JSON object from the model, with a strict-JSON request + robust fallback."""
@@ -86,15 +84,13 @@ class Embedder:
     """Emb(.) for dynamic memory. OpenAI embeddings when available, deterministic hashing fallback else."""
 
     def __init__(self, dim: int = 512):
+        import llm_provider as P                         # provider switch (OpenAI <-> Ollama)
         self.dim = dim
-        self.model = os.getenv("MESH_EMBED_MODEL", "text-embedding-3-small")
+        self.model = P.embed_model()
         self._client = None
         if not DRY_RUN:
             try:
-                from openai import OpenAI
-                base_url = os.getenv("MESH_EMBED_BASE_URL") or os.getenv("MESH_LLM_BASE_URL")
-                api_key = os.getenv("OPENAI_API_KEY", "dummy")
-                self._client = OpenAI(api_key=api_key, base_url=base_url) if base_url else OpenAI(api_key=api_key)
+                self._client = P.embed_client()
             except Exception:
                 self._client = None
 

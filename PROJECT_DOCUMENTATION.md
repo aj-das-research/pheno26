@@ -41,6 +41,7 @@ pheno26/
 ├── phewas_figures.py           # Fig 1(a) overlap + Fig 1(b) disease-association heatmap
 ├── phewas_ablation.py          # Table-1 Auto-PheWAS ablations (full / w-o Stage III / w-o Mem.&Tool)
 ├── phewas_baselines.py         # Table-1 Independent-LLM baselines (zero-shot CoT; OpenAI + optional Claude)
+├── ollama_provider.md          # one-switch OpenAI <-> local Ollama (TRE) — provider guide
 ├── synth_hpp/                  # 8 synthetic parquet tables (+ _manifest.csv)
 ├── references/                 # MESHAgents paper citation (.bib, .md)
 ├── whole_body_multiagent_plan.md          # ⚠ referenced but NOT YET WRITTEN (see §8/§9)
@@ -53,6 +54,7 @@ pheno26/
     │   ├── config.py           # UPSTREAM, unchanged
     │   ├── agents_bodycomp.py  # NEW: RegionAgent + BodyCompChiefAgent (subclass upstream)
     │   ├── mesh_core.py        # NEW: faithful 3-stage protocol (Tools, Memory, Stage I/II/III, f_AP, Q/C)
+    │   ├── llm_provider.py     # NEW: provider switch (OpenAI <-> Ollama) via one MESH_PROVIDER flag
     │   └── main_bodycomp.py    # NEW: body-composition entry point
     ├── data/                   # merged_data.csv + structures.json (generated)
     └── results/                # pipeline outputs (generated)
@@ -110,11 +112,22 @@ python src/main_bodycomp.py              # OFFLINE_LLM unset -> real GPT calls (
 > `Missing required columns: {LVEF (%), ...}` on body-composition data — that is by design (the upstream
 > files are unchanged). Use `src/main_bodycomp.py` for this project.
 
+### Local with Ollama (no internet / TRE) — one switch
+Flip the LLM provider from OpenAI to local Ollama with a single env var `MESH_PROVIDER=ollama`
+(model selectable via `MESH_LLM_MODEL`). No OpenAI key needed. See **[ollama_provider.md](ollama_provider.md)**.
+```bash
+ollama serve &                                   # local OpenAI-compatible server
+ollama pull qwen2.5:7b nomic-embed-text          # chat + embedding models (one-time)
+cd MESHAgents
+MESH_PROVIDER=ollama MESH_LLM_MODEL=qwen2.5:7b python src/main_bodycomp.py
+```
+
 ### On the HPP VM (real data)
 1. Set `pheno_io.USE_SYNTHETIC = False` (uses `pheno_utils.PhenoLoader`).
-2. Replace the OpenAI client with a local open-weight model endpoint (TRE has no external internet).
-3. Run `build_merged_data.py` then `src/main_bodycomp.py`. Only the data layer and model client change.
-   Confirm the real `age_sex` column names resolve via `build_merged_data.pick_col` (token-boundary match).
+2. Set `MESH_PROVIDER=ollama` (local open-weight models; TRE has no external internet) — one switch,
+   no upstream edits, no OpenAI key. See **[ollama_provider.md](ollama_provider.md)**.
+3. Run `build_merged_data.py` then `src/main_bodycomp.py`. Only the data layer (step 1) and the provider
+   (step 2) change. Confirm the real `age_sex` column names resolve via `build_merged_data.pick_col`.
 
 ## 6. What we have achieved
 
@@ -147,9 +160,10 @@ python src/main_bodycomp.py              # OFFLINE_LLM unset -> real GPT calls (
 | `A = f_AP({O^t},{R_i},TR)`, confidence<0.05 & relevance>0.3 | `f_AP` (rank × significance-weight × relevance-weight) |
 | Auto-PheWAS `Q(P)` (dependency), `C(P)` (coverage) | `dependency`, `coverage` (exact formulas) |
 
-The model client is **TRE-swappable**: set `MESH_LLM_BASE_URL` / `MESH_LLM_MODEL` to a local open-weight
-endpoint (no internet needed inside the TRE). `MESH_DRY_RUN=1` substitutes a statistical opinion stub for
-fast/free CI testing (not the product path). `MESH_MAX_ROUNDS` defaults to 10 (the paper's cap).
+The model client is **TRE-swappable via one flag**: `MESH_PROVIDER=ollama` routes the entire LLM path to
+local Ollama (model via `MESH_LLM_MODEL`, default `qwen2.5:7b`); no OpenAI key needed. Centralized in
+`src/llm_provider.py` (upstream `config.py`/`agents.py` untouched). See **[ollama_provider.md](ollama_provider.md)**.
+`MESH_DRY_RUN=1` substitutes a statistical opinion stub for fast/free testing; `MESH_MAX_ROUNDS` defaults to 10.
 
 ### Bugs fixed during reproduction
 - **Confounder corruption (critical):** `build_merged_data.py` selected the `age` confounder with a
@@ -303,8 +317,9 @@ Artifacts: `analysis_results_*.json`, `phenotype_scores_*.csv`, `phenotype_assoc
 2. ~~Add a supervised, confounder-adjusted association + FDR.~~ ✅ done.
 3. ~~Genuine multi-round agent discussion/consensus (the paper's MDT mechanism).~~ ✅ done (`mesh_core.stage3_consensus`).
 4. ~~Confounder discovery + Auto-PheWAS metrics (Q, C) + 5-fold-CV diagnosis.~~ ✅ done.
-5. Port to the HPP VM: `pheno_io.USE_SYNTHETIC=False`; set `MESH_LLM_BASE_URL`/`MESH_LLM_MODEL` to a local
-   open-weight endpoint; confirm `age_sex` column resolution and the `POSITIVE` case/control rules.
+5. Port to the HPP VM: `pheno_io.USE_SYNTHETIC=False` (data) + `MESH_PROVIDER=ollama` (LLM — ✅ one-switch
+   provider done, see [ollama_provider.md](ollama_provider.md)); confirm `age_sex` column resolution and
+   the `POSITIVE` case/control rules against the real categories.
 6. Scale to dataset #2 (`bone_density`) and #3 (`ecg`) via the same `structures` mechanism.
 7. Add the whole-body federation coordinator across datasets (cohort-overlap + multiple-testing handling).
 8. Write the three missing planning/feasibility docs referenced in §1/§3.

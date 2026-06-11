@@ -15,6 +15,7 @@ from typing import Any
 import numpy as np
 import pandas as pd
 
+import llm_provider as P          # provider switch — MUST precede `import config` (ollama dummy-key shim)
 from config import OPENAI_API_KEY, DATA_PATH, RESULTS_PATH, LOG_PATH, GPT_MODEL
 from agents_bodycomp import BodyCompChiefAgent, build_structures
 
@@ -70,7 +71,11 @@ async def main():
                 f"{ {k: len(v) for k, v in structures.items()} }")
 
     offline = os.getenv("OFFLINE_LLM", "0") == "1"
-    logger.info(f"Initializing BodyCompChiefAgent (model={GPT_MODEL}, OFFLINE_LLM={offline})")
+    dry_run = os.getenv("MESH_DRY_RUN", "0") == "1"
+    if not offline and not dry_run:
+        P.check()                                        # fail fast if Ollama is down / model not pulled (no-op for OpenAI)
+    logger.info(f"Initializing BodyCompChiefAgent "
+                f"(provider={P.provider()}, model={P.chat_model(default=GPT_MODEL)}, OFFLINE_LLM={offline})")
     chief = BodyCompChiefAgent(OPENAI_API_KEY, structures, CLINICAL_FACTORS)
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")

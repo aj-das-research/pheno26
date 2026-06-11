@@ -25,13 +25,16 @@ warnings.filterwarnings("ignore")
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, "MESHAgents", "src"))
 
+import llm_provider as P          # provider switch — MUST precede `import config` (ollama dummy-key shim)
 import mesh_core
 from config import OPENAI_API_KEY
 from agents_bodycomp import build_structures, FACTOR_CANDIDATES, DISCOVER_K, detect_label
 
 MERGED = os.path.join(HERE, "MESHAgents", "data", "merged_data.csv")
 RESULTS = os.path.join(HERE, "MESHAgents", "results")
-OPENAI_MODELS = os.getenv("MESH_BASELINE_MODELS", "gpt-4o-mini,gpt-3.5-turbo,gpt-5-mini").split(",")
+# Baseline models: OpenAI list by default; in ollama mode default to the single local chat model.
+_DEFAULT_BASELINE = P.chat_model() if P.is_ollama() else "gpt-4o-mini,gpt-3.5-turbo,gpt-5-mini"
+OPENAI_MODELS = os.getenv("MESH_BASELINE_MODELS", _DEFAULT_BASELINE).split(",")
 
 TASK = (
     "You are performing a phenome-wide association study (PheWAS). From the candidate body-composition "
@@ -53,8 +56,7 @@ def _parse(text):
 
 
 def call_openai(model, system, user):
-    from openai import OpenAI
-    client = OpenAI(api_key=OPENAI_API_KEY)
+    client = P.chat_client()                              # provider-aware (OpenAI or local Ollama)
     try:
         r = client.chat.completions.create(model=model, response_format={"type": "json_object"},
                                            messages=[{"role": "system", "content": system},

@@ -14,6 +14,9 @@ Analysis*, MICCAI 2025) from single-organ cardiac imaging to **whole-body phenot
 
 ## Quickstart
 
+> Full step-by-step guide (clone → setup → synthetic **or real Pheno data** → run): **[RUNNING.md](RUNNING.md)**.
+> LLM provider switch (OpenAI ↔ local Ollama): **[ollama_provider.md](ollama_provider.md)**.
+
 ```bash
 # 1) one-command environment setup (creates ./.venv in the project root)
 ./setup.sh

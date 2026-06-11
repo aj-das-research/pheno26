@@ -32,3 +32,7 @@ fi
 echo
 echo "Done. Activate with:  source .venv/bin/activate"
 echo "Then:                 python make_synthetic.py && python build_merged_data.py --disease diabetes"
+echo
+echo "Local LLM (optional, no internet — e.g. the HPP/Pheno TRE VM):"
+echo "  install Ollama (https://ollama.com), then:  ollama serve & ; ollama pull qwen2.5:7b nomic-embed-text"
+echo "  run locally:  MESH_PROVIDER=ollama python MESHAgents/src/main_bodycomp.py   (see ollama_provider.md)"

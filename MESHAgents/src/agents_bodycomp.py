@@ -30,6 +30,7 @@ from agents import BaseOrganAgent, ChiefAgent, StatisticalTools, Memory
 from config import GPT_MODEL
 from utils import apply_multiple_testing_correction
 import mesh_core
+import llm_provider as P                                  # provider switch (OpenAI <-> Ollama)
 
 logger = logging.getLogger(__name__)
 
@@ -63,12 +64,12 @@ EXPERT_BODYCOMP = [
 ]
 
 
-def _gpt(client: OpenAI, system: str, user: str) -> str:
+def _gpt(client: OpenAI, system: str, user: str, model: str = None) -> str:
     if OFFLINE:
         return _STUB
     try:
         resp = client.chat.completions.create(
-            model=GPT_MODEL,
+            model=model or P.chat_model(default=GPT_MODEL),
             messages=[{"role": "system", "content": system}, {"role": "user", "content": user}],
         )
         return resp.choices[0].message.content
@@ -168,6 +169,9 @@ class RegionAgent(BaseOrganAgent):
 
     def __init__(self, name: str, phenotypes: List[str], api_key: str):
         super().__init__(name, phenotypes, api_key)
+        # override the base-class OpenAI client/model with the provider-aware ones (Ollama/OpenAI)
+        self.client = P.chat_client()
+        self.model = P.chat_model(default=self.model)
         self.system_prompt = (
             f"You are a specialist analyst for the '{name}' body-composition region. "
             f"Interpret its structural/compositional phenotypes (fat, lean, bone, tissue %)."
@@ -176,7 +180,7 @@ class RegionAgent(BaseOrganAgent):
     def get_gpt_analysis(self, data_description: str, temperature: float = 0) -> str:
         if OFFLINE:
             return _STUB
-        return _gpt(self.client, self.system_prompt, data_description)
+        return _gpt(self.client, self.system_prompt, data_description, model=self.model)
 
     async def analyze(self, data: pd.DataFrame) -> Dict[str, Any]:
         cols = [c for c in self.phenotypes if c in data.columns]
@@ -206,7 +210,8 @@ class BodyCompChiefAgent(ChiefAgent):
         self.tools = StatisticalTools()
         self.latest_results = None
         self.api_key = api_key
-        self.client = OpenAI(api_key=api_key)
+        self.client = P.chat_client()                    # provider-aware (Ollama/OpenAI)
+        self.model = P.chat_model(default=GPT_MODEL)
         self.clinical_factors = clinical_factors or []
         self.system_prompt = (
             "You are a senior whole-body phenotype expert leading a team of body-composition "
@@ -358,4 +363,5 @@ class BodyCompChiefAgent(ChiefAgent):
                    f"Auto-PheWAS dependency Q={metrics.get('dependency_Q')}, coverage C={metrics.get('coverage_C')}. "
                    f"Discovered set: {discovered}.")
         return _gpt(self.client, self.system_prompt,
-                    f"Summarise these whole-body body-composition PheWAS findings:\n{summary}")
+                    f"Summarise these whole-body body-composition PheWAS findings:\n{summary}",
+                    model=self.model)
