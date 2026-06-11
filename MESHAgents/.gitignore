@@ -1,0 +1,9 @@
+# Minimal ignores for the MESHAgents subtree (the repo-root .gitignore handles the rest).
+# Kept permissive so src/, data/ (synthetic), and results/ figures are tracked.
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+.env
+*.log
+logs/

@@ -1,0 +1,1379 @@
+{
+    "discovered_phenotypes": [
+        "body_comp_total_tissue_percent_fat",
+        "body_comp_total_region_percent_fat",
+        "body_comp_android_tissue_percent_fat",
+        "total_scan_vat_area",
+        "body_comp_trunk_fat_mass",
+        "body_comp_android_region_percent_fat",
+        "total_scan_vat_mass",
+        "total_scan_vat_volume",
+        "body_comp_trunk_tissue_percent_fat",
+        "body_comp_android_fat_mass",
+        "body_comp_trunk_region_percent_fat",
+        "body_comp_arm_left_total_mass",
+        "body_comp_total_fat_mass"
+    ],
+    "label": "diabetes",
+    "confounders": [
+        "age",
+        "sex",
+        "bmi",
+        "weight",
+        "waist_circumference"
+    ],
+    "n_phenotypes_tested": 150,
+    "n_significant_fdr": 13,
+    "table": [
+        {
+            "phenotype": "body_comp_total_tissue_percent_fat",
+            "beta": 0.6916082811691016,
+            "abs_beta": 0.6916082811691016,
+            "p_value": 4.952662875504721e-10,
+            "n": 468,
+            "fdr_p": 7.428994313257081e-08,
+            "significant": true
+        },
+        {
+            "phenotype": "body_comp_total_region_percent_fat",
+            "beta": 0.6114213178748177,
+            "abs_beta": 0.6114213178748177,
+            "p_value": 1.8698390902050667e-08,
+            "n": 468,
+            "fdr_p": 1.4023793176538e-06,
+            "significant": true
+        },
+        {
+            "phenotype": "body_comp_android_tissue_percent_fat",
+            "beta": 0.5682979505311334,
+            "abs_beta": 0.5682979505311334,
+            "p_value": 9.799316509606861e-08,
+            "n": 468,
+            "fdr_p": 4.8996582548034305e-06,
+            "significant": true
+        },
+        {
+            "phenotype": "total_scan_vat_area",
+            "beta": 0.4465098342974069,
+            "abs_beta": 0.4465098342974069,
+            "p_value": 1.4372625906399061e-05,
+            "n": 468,
+            "fdr_p": 0.0005389734714899648,
+            "significant": true
+        },
+        {
+            "phenotype": "body_comp_trunk_fat_mass",
+            "beta": 0.4380371116721229,
+            "abs_beta": 0.4380371116721229,
+            "p_value": 1.9472103710251568e-05,
+            "n": 468,
+            "fdr_p": 0.000584163111307547,
+            "significant": true
+        },
+        {
+            "phenotype": "body_comp_android_region_percent_fat",
+            "beta": 0.4228023878013761,
+            "abs_beta": 0.4228023878013761,
+            "p_value": 4.538325655205859e-05,
+            "n": 468,
+            "fdr_p": 0.0011345814138014648,
+            "significant": true
+        },
+        {
+            "phenotype": "total_scan_vat_mass",
+            "beta": 0.42047454189320493,
+            "abs_beta": 0.42047454189320493,
+            "p_value": 5.657531788615064e-05,
+            "n": 468,
+            "fdr_p": 0.0012123282404175137,
+            "significant": true
+        },
+        {
+            "phenotype": "total_scan_vat_volume",
+            "beta": 0.3914852508012182,
+            "abs_beta": 0.3914852508012182,
+            "p_value": 0.0001177271438877549,
+            "n": 468,
+            "fdr_p": 0.001962119064795915,
+            "significant": true
+        },
+        {
+            "phenotype": "body_comp_trunk_tissue_percent_fat",
+            "beta": 0.39035248787260696,
+            "abs_beta": 0.39035248787260696,
+            "p_value": 0.00011742727026477342,
+            "n": 468,
+            "fdr_p": 0.001962119064795915,
+            "significant": true
+        },
+        {
+            "phenotype": "body_comp_android_fat_mass",
+            "beta": 0.3833204869117572,
+            "abs_beta": 0.3833204869117572,
+            "p_value": 0.00018168756172477055,
+            "n": 468,
+            "fdr_p": 0.002725313425871558,
+            "significant": true
+        },
+        {
+            "phenotype": "body_comp_trunk_region_percent_fat",
+            "beta": 0.3437286111843536,
+            "abs_beta": 0.3437286111843536,
+            "p_value": 0.0005255328891227833,
+            "n": 468,
+            "fdr_p": 0.007166357578947045,
+            "significant": true
+        },
+        {
+            "phenotype": "body_comp_arm_left_total_mass",
+            "beta": -0.30831306457019686,
+            "abs_beta": 0.30831306457019686,
+            "p_value": 0.0016830232368800094,
+            "n": 468,
+            "fdr_p": 0.021037790461000117,
+            "significant": true
+        },
+        {
+            "phenotype": "body_comp_total_fat_mass",
+            "beta": 0.3077082957726751,
+            "abs_beta": 0.3077082957726751,
+            "p_value": 0.002013937397425946,
+            "n": 468,
+            "fdr_p": 0.023237739201068607,
+            "significant": true
+        },
+        {
+            "phenotype": "body_comp_arm_left_region_percent_fat",
+            "beta": 0.2410927461496106,
+            "abs_beta": 0.2410927461496106,
+            "p_value": 0.014973064441259284,
+            "n": 468,
+            "fdr_p": 0.16042569044206376,
+            "significant": false
+        },
+        {
+            "phenotype": "total_scan_sat_volume",
+            "beta": -0.23332085444675607,
+            "abs_beta": 0.23332085444675607,
+            "p_value": 0.01678847918010787,
+            "n": 468,
+            "fdr_p": 0.16676315172511122,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_leg_left_lean_mass",
+            "beta": 0.231654855490634,
+            "abs_beta": 0.231654855490634,
+            "p_value": 0.017788069517345198,
+            "n": 468,
+            "fdr_p": 0.16676315172511122,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_leg_right_lean_mass",
+            "beta": 0.20663047795206477,
+            "abs_beta": 0.20663047795206477,
+            "p_value": 0.032072810453016416,
+            "n": 468,
+            "fdr_p": 0.26727342044180347,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_left_lean_mass",
+            "beta": 0.20649256033444183,
+            "abs_beta": 0.20649256033444183,
+            "p_value": 0.03165158479478769,
+            "n": 468,
+            "fdr_p": 0.26727342044180347,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_diff_tissue_percent_fat",
+            "beta": 0.1950597357944598,
+            "abs_beta": 0.1950597357944598,
+            "p_value": 0.042297159993165,
+            "n": 468,
+            "fdr_p": 0.33392494731446054,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arm_right_fat_mass",
+            "beta": -0.1899316430547425,
+            "abs_beta": 0.1899316430547425,
+            "p_value": 0.049675980783133664,
+            "n": 468,
+            "fdr_p": 0.3548284341652404,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arm_left_tissue_mass",
+            "beta": 0.18882118553623534,
+            "abs_beta": 0.18882118553623534,
+            "p_value": 0.048724422986404406,
+            "n": 468,
+            "fdr_p": 0.3548284341652404,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_legs_lean_mass",
+            "beta": 0.1867540555058562,
+            "abs_beta": 0.1867540555058562,
+            "p_value": 0.052906980407899366,
+            "n": 468,
+            "fdr_p": 0.3607294118720411,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arms_diff_tissue_percent_fat",
+            "beta": -0.18495885299644485,
+            "abs_beta": 0.18495885299644485,
+            "p_value": 0.057316307630854296,
+            "n": 468,
+            "fdr_p": 0.36849897813724053,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_left_fat_mass",
+            "beta": -0.1842815382823762,
+            "abs_beta": 0.1842815382823762,
+            "p_value": 0.06001464426234247,
+            "n": 468,
+            "fdr_p": 0.36849897813724053,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arm_right_bone_mass",
+            "beta": 0.1817217080114893,
+            "abs_beta": 0.1817217080114893,
+            "p_value": 0.06141649635620675,
+            "n": 468,
+            "fdr_p": 0.36849897813724053,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_right_fat_free_mass",
+            "beta": -0.17656754800969823,
+            "abs_beta": 0.17656754800969823,
+            "p_value": 0.06551039407486255,
+            "n": 468,
+            "fdr_p": 0.37794458120113006,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_legs_bone_mass",
+            "beta": -0.16660943833560599,
+            "abs_beta": 0.16660943833560599,
+            "p_value": 0.08208169105325225,
+            "n": 468,
+            "fdr_p": 0.4560093947402903,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_gynoid_bone_mass",
+            "beta": -0.16405565750652115,
+            "abs_beta": 0.16405565750652115,
+            "p_value": 0.08767264778280916,
+            "n": 468,
+            "fdr_p": 0.4696748988364776,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_left_fat_mass",
+            "beta": 0.16112496310254354,
+            "abs_beta": 0.16112496310254354,
+            "p_value": 0.09240069847751176,
+            "n": 468,
+            "fdr_p": 0.4779346472974746,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_gynoid_region_percent_fat",
+            "beta": -0.15499634851639388,
+            "abs_beta": 0.15499634851639388,
+            "p_value": 0.10286518126880038,
+            "n": 468,
+            "fdr_p": 0.5143259063440019,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_lean_mass",
+            "beta": -0.14934672146454142,
+            "abs_beta": 0.14934672146454142,
+            "p_value": 0.121092921128443,
+            "n": 468,
+            "fdr_p": 0.5676230677895765,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_legs_diff_region_percent_fat",
+            "beta": 0.1490514974640596,
+            "abs_beta": 0.1490514974640596,
+            "p_value": 0.12074741170988973,
+            "n": 468,
+            "fdr_p": 0.5676230677895765,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_right_lean_mass",
+            "beta": 0.1483088646202156,
+            "abs_beta": 0.1483088646202156,
+            "p_value": 0.12520721901165863,
+            "n": 468,
+            "fdr_p": 0.5691237227802665,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_gynoid_fat_mass",
+            "beta": -0.1462111432687049,
+            "abs_beta": 0.1462111432687049,
+            "p_value": 0.13229067293534313,
+            "n": 468,
+            "fdr_p": 0.5836353217735727,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arms_fat_free_mass",
+            "beta": -0.13642565823978567,
+            "abs_beta": 0.13642565823978567,
+            "p_value": 0.15231322735415456,
+            "n": 468,
+            "fdr_p": 0.6527709743749481,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arms_lean_mass",
+            "beta": -0.13179816382982548,
+            "abs_beta": 0.13179816382982548,
+            "p_value": 0.16705286618534598,
+            "n": 468,
+            "fdr_p": 0.6960536091056083,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_leg_right_total_mass",
+            "beta": -0.1285489571216732,
+            "abs_beta": 0.1285489571216732,
+            "p_value": 0.1825568956113487,
+            "n": 468,
+            "fdr_p": 0.7400955227487109,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_legs_diff_bone_mass",
+            "beta": -0.12247201769902645,
+            "abs_beta": 0.12247201769902645,
+            "p_value": 0.2013660785860949,
+            "n": 468,
+            "fdr_p": 0.762818115666544,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_bone_mass",
+            "beta": -0.12084649169783407,
+            "abs_beta": 0.12084649169783407,
+            "p_value": 0.20519204572681116,
+            "n": 468,
+            "fdr_p": 0.762818115666544,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_legs_fat_free_mass",
+            "beta": 0.11933487187183939,
+            "abs_beta": 0.11933487187183939,
+            "p_value": 0.210449191826397,
+            "n": 468,
+            "fdr_p": 0.762818115666544,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arms_diff_total_mass",
+            "beta": -0.11775711201560027,
+            "abs_beta": 0.11775711201560027,
+            "p_value": 0.22242094821606107,
+            "n": 468,
+            "fdr_p": 0.762818115666544,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_left_region_percent_fat",
+            "beta": 0.11733634735189441,
+            "abs_beta": 0.11733634735189441,
+            "p_value": 0.2192650096111478,
+            "n": 468,
+            "fdr_p": 0.762818115666544,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arm_right_lean_mass",
+            "beta": 0.11701218719067809,
+            "abs_beta": 0.11701218719067809,
+            "p_value": 0.2235323200000472,
+            "n": 468,
+            "fdr_p": 0.762818115666544,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_gynoid_lean_mass",
+            "beta": 0.11637531530737584,
+            "abs_beta": 0.11637531530737584,
+            "p_value": 0.2289803043594726,
+            "n": 468,
+            "fdr_p": 0.762818115666544,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_right_bone_mass",
+            "beta": 0.11444827940162533,
+            "abs_beta": 0.11444827940162533,
+            "p_value": 0.2332757828779617,
+            "n": 468,
+            "fdr_p": 0.762818115666544,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_left_tissue_percent_fat",
+            "beta": 0.1114367603354749,
+            "abs_beta": 0.1114367603354749,
+            "p_value": 0.24289820571281684,
+            "n": 468,
+            "fdr_p": 0.762818115666544,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_left_tissue_percent_fat",
+            "beta": -0.11133143472622022,
+            "abs_beta": 0.11133143472622022,
+            "p_value": 0.2417861863782217,
+            "n": 468,
+            "fdr_p": 0.762818115666544,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_right_tissue_percent_fat",
+            "beta": 0.11009047697850964,
+            "abs_beta": 0.11009047697850964,
+            "p_value": 0.24982232505295,
+            "n": 468,
+            "fdr_p": 0.762818115666544,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_leg_right_tissue_percent_fat",
+            "beta": -0.10942682860131202,
+            "abs_beta": 0.10942682860131202,
+            "p_value": 0.25029066941806366,
+            "n": 468,
+            "fdr_p": 0.762818115666544,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_tissue_mass",
+            "beta": 0.107824954321461,
+            "abs_beta": 0.107824954321461,
+            "p_value": 0.25959705770414565,
+            "n": 468,
+            "fdr_p": 0.762818115666544,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_diff_fat_mass",
+            "beta": 0.10686376749211814,
+            "abs_beta": 0.10686376749211814,
+            "p_value": 0.25941104254690794,
+            "n": 468,
+            "fdr_p": 0.762818115666544,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arm_left_tissue_percent_fat",
+            "beta": -0.10572955624638274,
+            "abs_beta": 0.10572955624638274,
+            "p_value": 0.2644436134310686,
+            "n": 468,
+            "fdr_p": 0.762818115666544,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_diff_region_percent_fat",
+            "beta": -0.10485671638488069,
+            "abs_beta": 0.10485671638488069,
+            "p_value": 0.28383287425401815,
+            "n": 468,
+            "fdr_p": 0.7823431476717613,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_right_fat_free_mass",
+            "beta": -0.10191589772896142,
+            "abs_beta": 0.10191589772896142,
+            "p_value": 0.286779234846409,
+            "n": 468,
+            "fdr_p": 0.7823431476717613,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_right_lean_mass",
+            "beta": 0.1015414664698753,
+            "abs_beta": 0.1015414664698753,
+            "p_value": 0.28685915414631247,
+            "n": 468,
+            "fdr_p": 0.7823431476717613,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_left_bone_mass",
+            "beta": 0.09674865377759627,
+            "abs_beta": 0.09674865377759627,
+            "p_value": 0.3121721000687394,
+            "n": 468,
+            "fdr_p": 0.7827371473517849,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_left_region_percent_fat",
+            "beta": 0.09483471009060894,
+            "abs_beta": 0.09483471009060894,
+            "p_value": 0.3200376533236903,
+            "n": 468,
+            "fdr_p": 0.7827371473517849,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arms_region_percent_fat",
+            "beta": 0.09430654617770416,
+            "abs_beta": 0.09430654617770416,
+            "p_value": 0.32560486420414636,
+            "n": 468,
+            "fdr_p": 0.7827371473517849,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_diff_tissue_mass",
+            "beta": -0.09415068884225392,
+            "abs_beta": 0.09415068884225392,
+            "p_value": 0.3205822609182949,
+            "n": 468,
+            "fdr_p": 0.7827371473517849,
+            "significant": false
+        },
+        {
+            "phenotype": "total_scan_sat_mass",
+            "beta": -0.09402800584761307,
+            "abs_beta": 0.09402800584761307,
+            "p_value": 0.32502394516568067,
+            "n": 468,
+            "fdr_p": 0.7827371473517849,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_leg_right_fat_mass",
+            "beta": -0.09253602079122832,
+            "abs_beta": 0.09253602079122832,
+            "p_value": 0.3344887771562447,
+            "n": 468,
+            "fdr_p": 0.7827371473517849,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_diff_fat_mass",
+            "beta": -0.09243483907152339,
+            "abs_beta": 0.09243483907152339,
+            "p_value": 0.334922176594751,
+            "n": 468,
+            "fdr_p": 0.7827371473517849,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arm_right_region_percent_fat",
+            "beta": 0.09192050924905645,
+            "abs_beta": 0.09192050924905645,
+            "p_value": 0.33842551579295843,
+            "n": 468,
+            "fdr_p": 0.7827371473517849,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_diff_bone_mass",
+            "beta": 0.0917912595953235,
+            "abs_beta": 0.0917912595953235,
+            "p_value": 0.3396179089330036,
+            "n": 468,
+            "fdr_p": 0.7827371473517849,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_lean_mass",
+            "beta": 0.09167952055534888,
+            "abs_beta": 0.09167952055534888,
+            "p_value": 0.3401751057408676,
+            "n": 468,
+            "fdr_p": 0.7827371473517849,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arms_tissue_percent_fat",
+            "beta": -0.09068226040335528,
+            "abs_beta": 0.09068226040335528,
+            "p_value": 0.35020169455052885,
+            "n": 468,
+            "fdr_p": 0.7827371473517849,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_android_tissue_mass",
+            "beta": 0.08968632081858607,
+            "abs_beta": 0.08968632081858607,
+            "p_value": 0.3468845577994164,
+            "n": 468,
+            "fdr_p": 0.7827371473517849,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_left_total_mass",
+            "beta": 0.08861370649739767,
+            "abs_beta": 0.08861370649739767,
+            "p_value": 0.35484084013280914,
+            "n": 468,
+            "fdr_p": 0.7827371473517849,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arm_right_tissue_mass",
+            "beta": 0.08607427803946635,
+            "abs_beta": 0.08607427803946635,
+            "p_value": 0.3678416178859205,
+            "n": 468,
+            "fdr_p": 0.7996556910563489,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arms_total_mass",
+            "beta": -0.085461838913546,
+            "abs_beta": 0.085461838913546,
+            "p_value": 0.37461346713633326,
+            "n": 468,
+            "fdr_p": 0.8027431438635713,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_left_fat_free_mass",
+            "beta": -0.08255584531694256,
+            "abs_beta": 0.08255584531694256,
+            "p_value": 0.3887031117903421,
+            "n": 468,
+            "fdr_p": 0.8049454124117075,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_legs_tissue_percent_fat",
+            "beta": 0.08162985279633157,
+            "abs_beta": 0.08162985279633157,
+            "p_value": 0.39590628201820655,
+            "n": 468,
+            "fdr_p": 0.8049454124117075,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_android_fat_free_mass",
+            "beta": 0.08125021872759447,
+            "abs_beta": 0.08125021872759447,
+            "p_value": 0.39956686481673787,
+            "n": 468,
+            "fdr_p": 0.8049454124117075,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_gynoid_tissue_mass",
+            "beta": -0.08084706394596919,
+            "abs_beta": 0.08084706394596919,
+            "p_value": 0.398169636009194,
+            "n": 468,
+            "fdr_p": 0.8049454124117075,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arms_bone_mass",
+            "beta": 0.07728225991805492,
+            "abs_beta": 0.07728225991805492,
+            "p_value": 0.4193462219824643,
+            "n": 468,
+            "fdr_p": 0.8049454124117075,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arms_fat_mass",
+            "beta": 0.07532167349071076,
+            "abs_beta": 0.07532167349071076,
+            "p_value": 0.42831646360981723,
+            "n": 468,
+            "fdr_p": 0.8049454124117075,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_android_lean_mass",
+            "beta": 0.07508261021164053,
+            "abs_beta": 0.07508261021164053,
+            "p_value": 0.43024274496248593,
+            "n": 468,
+            "fdr_p": 0.8049454124117075,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_diff_lean_mass",
+            "beta": 0.0740379993737645,
+            "abs_beta": 0.0740379993737645,
+            "p_value": 0.4376038427997695,
+            "n": 468,
+            "fdr_p": 0.8049454124117075,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_right_region_percent_fat",
+            "beta": 0.07396166270084664,
+            "abs_beta": 0.07396166270084664,
+            "p_value": 0.43747115694091354,
+            "n": 468,
+            "fdr_p": 0.8049454124117075,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_bone_mass",
+            "beta": 0.07388767022076913,
+            "abs_beta": 0.07388767022076913,
+            "p_value": 0.43877690306636896,
+            "n": 468,
+            "fdr_p": 0.8049454124117075,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arm_left_fat_mass",
+            "beta": -0.07318039752551879,
+            "abs_beta": 0.07318039752551879,
+            "p_value": 0.44412058159361256,
+            "n": 468,
+            "fdr_p": 0.8049454124117075,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arms_diff_fat_free_mass",
+            "beta": -0.07317752690588211,
+            "abs_beta": 0.07317752690588211,
+            "p_value": 0.455362310340632,
+            "n": 468,
+            "fdr_p": 0.8049454124117075,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_leg_left_tissue_percent_fat",
+            "beta": 0.07195042739317492,
+            "abs_beta": 0.07195042739317492,
+            "p_value": 0.44994133648438384,
+            "n": 468,
+            "fdr_p": 0.8049454124117075,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_right_bone_mass",
+            "beta": 0.07057966223032308,
+            "abs_beta": 0.07057966223032308,
+            "p_value": 0.4556195601699712,
+            "n": 468,
+            "fdr_p": 0.8049454124117075,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_gynoid_tissue_percent_fat",
+            "beta": 0.0691693348508677,
+            "abs_beta": 0.0691693348508677,
+            "p_value": 0.4756543770446383,
+            "n": 468,
+            "fdr_p": 0.8049454124117075,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arm_right_total_mass",
+            "beta": -0.06792357759610565,
+            "abs_beta": 0.06792357759610565,
+            "p_value": 0.47807117713276026,
+            "n": 468,
+            "fdr_p": 0.8049454124117075,
+            "significant": false
+        },
+        {
+            "phenotype": "total_scan_sat_area",
+            "beta": 0.06743278904650424,
+            "abs_beta": 0.06743278904650424,
+            "p_value": 0.4797718850474674,
+            "n": 468,
+            "fdr_p": 0.8049454124117075,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_left_lean_mass",
+            "beta": -0.06708362785262334,
+            "abs_beta": 0.06708362785262334,
+            "p_value": 0.481698615065281,
+            "n": 468,
+            "fdr_p": 0.8049454124117075,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_right_tissue_mass",
+            "beta": -0.06693759517488038,
+            "abs_beta": 0.06693759517488038,
+            "p_value": 0.4872775606797701,
+            "n": 468,
+            "fdr_p": 0.8049454124117075,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_leg_left_fat_free_mass",
+            "beta": -0.06671273861906905,
+            "abs_beta": 0.06671273861906905,
+            "p_value": 0.48664014037202685,
+            "n": 468,
+            "fdr_p": 0.8049454124117075,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_right_region_percent_fat",
+            "beta": 0.06659471006695897,
+            "abs_beta": 0.06659471006695897,
+            "p_value": 0.4883335501964359,
+            "n": 468,
+            "fdr_p": 0.8049454124117075,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_fat_free_mass",
+            "beta": 0.06358263123890194,
+            "abs_beta": 0.06358263123890194,
+            "p_value": 0.504483495404652,
+            "n": 468,
+            "fdr_p": 0.8225274381597587,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_legs_diff_tissue_percent_fat",
+            "beta": 0.059879047263475975,
+            "abs_beta": 0.059879047263475975,
+            "p_value": 0.5318444885470119,
+            "n": 468,
+            "fdr_p": 0.8532130378448058,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_left_fat_free_mass",
+            "beta": 0.05833814934405903,
+            "abs_beta": 0.05833814934405903,
+            "p_value": 0.5428819070056756,
+            "n": 468,
+            "fdr_p": 0.8532130378448058,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_right_fat_mass",
+            "beta": -0.057350723247156496,
+            "abs_beta": 0.057350723247156496,
+            "p_value": 0.5476457831625505,
+            "n": 468,
+            "fdr_p": 0.8532130378448058,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arm_right_tissue_percent_fat",
+            "beta": 0.05548414061841236,
+            "abs_beta": 0.05548414061841236,
+            "p_value": 0.5621559761026811,
+            "n": 468,
+            "fdr_p": 0.8532130378448058,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arm_left_bone_mass",
+            "beta": 0.0536306088987927,
+            "abs_beta": 0.0536306088987927,
+            "p_value": 0.5781020501496072,
+            "n": 468,
+            "fdr_p": 0.8532130378448058,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_leg_right_tissue_mass",
+            "beta": -0.0526888179608828,
+            "abs_beta": 0.0526888179608828,
+            "p_value": 0.5841865186178585,
+            "n": 468,
+            "fdr_p": 0.8532130378448058,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_leg_left_total_mass",
+            "beta": -0.05221749918685882,
+            "abs_beta": 0.05221749918685882,
+            "p_value": 0.5860512462353411,
+            "n": 468,
+            "fdr_p": 0.8532130378448058,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_legs_region_percent_fat",
+            "beta": -0.05193862379308397,
+            "abs_beta": 0.05193862379308397,
+            "p_value": 0.5881737968572915,
+            "n": 468,
+            "fdr_p": 0.8532130378448058,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_diff_fat_free_mass",
+            "beta": -0.05107443125222147,
+            "abs_beta": 0.05107443125222147,
+            "p_value": 0.5946912220303546,
+            "n": 468,
+            "fdr_p": 0.8532130378448058,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_left_total_mass",
+            "beta": -0.05081089535972829,
+            "abs_beta": 0.05081089535972829,
+            "p_value": 0.5958135043188773,
+            "n": 468,
+            "fdr_p": 0.8532130378448058,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_left_tissue_mass",
+            "beta": 0.05053023765369227,
+            "abs_beta": 0.05053023765369227,
+            "p_value": 0.5941645012605197,
+            "n": 468,
+            "fdr_p": 0.8532130378448058,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_left_bone_mass",
+            "beta": -0.05020872021634346,
+            "abs_beta": 0.05020872021634346,
+            "p_value": 0.5995167719264729,
+            "n": 468,
+            "fdr_p": 0.8532130378448058,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_right_total_mass",
+            "beta": -0.049820647688049946,
+            "abs_beta": 0.049820647688049946,
+            "p_value": 0.6008816853065057,
+            "n": 468,
+            "fdr_p": 0.8532130378448058,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_legs_diff_tissue_mass",
+            "beta": 0.04950612979229515,
+            "abs_beta": 0.04950612979229515,
+            "p_value": 0.6029372134103295,
+            "n": 468,
+            "fdr_p": 0.8532130378448058,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_legs_total_mass",
+            "beta": -0.047317339797233494,
+            "abs_beta": 0.047317339797233494,
+            "p_value": 0.621438329355142,
+            "n": 468,
+            "fdr_p": 0.8684109792627436,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_legs_diff_fat_mass",
+            "beta": -0.04518948898979695,
+            "abs_beta": 0.04518948898979695,
+            "p_value": 0.6358821520304234,
+            "n": 468,
+            "fdr_p": 0.8684109792627436,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_diff_tissue_percent_fat",
+            "beta": 0.0449241541024507,
+            "abs_beta": 0.0449241541024507,
+            "p_value": 0.6392032277438371,
+            "n": 468,
+            "fdr_p": 0.8684109792627436,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_leg_right_fat_free_mass",
+            "beta": 0.04297856064388782,
+            "abs_beta": 0.04297856064388782,
+            "p_value": 0.6529503789889639,
+            "n": 468,
+            "fdr_p": 0.8684109792627436,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arms_diff_tissue_mass",
+            "beta": -0.04256886828347462,
+            "abs_beta": 0.04256886828347462,
+            "p_value": 0.6576077178036303,
+            "n": 468,
+            "fdr_p": 0.8684109792627436,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_gynoid_total_mass",
+            "beta": 0.04211378976859399,
+            "abs_beta": 0.04211378976859399,
+            "p_value": 0.6581148842283566,
+            "n": 468,
+            "fdr_p": 0.8684109792627436,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arm_left_fat_free_mass",
+            "beta": -0.04181042163283848,
+            "abs_beta": 0.04181042163283848,
+            "p_value": 0.6636302846488424,
+            "n": 468,
+            "fdr_p": 0.8684109792627436,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_total_mass",
+            "beta": -0.041693610553733745,
+            "abs_beta": 0.041693610553733745,
+            "p_value": 0.6633014645285251,
+            "n": 468,
+            "fdr_p": 0.8684109792627436,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_legs_diff_lean_mass",
+            "beta": 0.041067586909310436,
+            "abs_beta": 0.041067586909310436,
+            "p_value": 0.6660470755492119,
+            "n": 468,
+            "fdr_p": 0.8684109792627436,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_leg_right_region_percent_fat",
+            "beta": -0.04070639609488688,
+            "abs_beta": 0.04070639609488688,
+            "p_value": 0.6715711572965217,
+            "n": 468,
+            "fdr_p": 0.8684109792627436,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_tissue_mass",
+            "beta": 0.036956157775045864,
+            "abs_beta": 0.036956157775045864,
+            "p_value": 0.6978540387012011,
+            "n": 468,
+            "fdr_p": 0.8852252136618104,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_legs_diff_total_mass",
+            "beta": 0.03653636221021811,
+            "abs_beta": 0.03653636221021811,
+            "p_value": 0.7046622546206401,
+            "n": 468,
+            "fdr_p": 0.8852252136618104,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_diff_total_mass",
+            "beta": -0.03616486155850449,
+            "abs_beta": 0.03616486155850449,
+            "p_value": 0.7038285912528826,
+            "n": 468,
+            "fdr_p": 0.8852252136618104,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_right_total_mass",
+            "beta": 0.03536646014197082,
+            "abs_beta": 0.03536646014197082,
+            "p_value": 0.7149708312545098,
+            "n": 468,
+            "fdr_p": 0.8852252136618104,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arm_left_lean_mass",
+            "beta": -0.03402110046077662,
+            "abs_beta": 0.03402110046077662,
+            "p_value": 0.7226469822576982,
+            "n": 468,
+            "fdr_p": 0.8852252136618104,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_left_tissue_mass",
+            "beta": -0.03401999013408379,
+            "abs_beta": 0.03401999013408379,
+            "p_value": 0.7211512118209447,
+            "n": 468,
+            "fdr_p": 0.8852252136618104,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_total_mass",
+            "beta": -0.03336692239665917,
+            "abs_beta": 0.03336692239665917,
+            "p_value": 0.7266957922977187,
+            "n": 468,
+            "fdr_p": 0.8852252136618104,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_leg_left_tissue_mass",
+            "beta": -0.032276471554091475,
+            "abs_beta": 0.032276471554091475,
+            "p_value": 0.7360222751495878,
+            "n": 468,
+            "fdr_p": 0.8852252136618104,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_leg_right_bone_mass",
+            "beta": -0.03193473074657631,
+            "abs_beta": 0.03193473074657631,
+            "p_value": 0.7376876780515087,
+            "n": 468,
+            "fdr_p": 0.8852252136618104,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arms_diff_bone_mass",
+            "beta": -0.02738819358384959,
+            "abs_beta": 0.02738819358384959,
+            "p_value": 0.7749304478223125,
+            "n": 468,
+            "fdr_p": 0.9225362474075148,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_android_bone_mass",
+            "beta": 0.024436856581576776,
+            "abs_beta": 0.024436856581576776,
+            "p_value": 0.7967575544745948,
+            "n": 468,
+            "fdr_p": 0.9410522296944034,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_gynoid_fat_free_mass",
+            "beta": -0.02222492082482478,
+            "abs_beta": 0.02222492082482478,
+            "p_value": 0.8147036762503632,
+            "n": 468,
+            "fdr_p": 0.9424319067931424,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arms_diff_lean_mass",
+            "beta": -0.02168164469187637,
+            "abs_beta": 0.02168164469187637,
+            "p_value": 0.8219187267204908,
+            "n": 468,
+            "fdr_p": 0.9424319067931424,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_leg_left_region_percent_fat",
+            "beta": -0.021243708186351396,
+            "abs_beta": 0.021243708186351396,
+            "p_value": 0.8231866214592326,
+            "n": 468,
+            "fdr_p": 0.9424319067931424,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_diff_lean_mass",
+            "beta": -0.02104602238032038,
+            "abs_beta": 0.02104602238032038,
+            "p_value": 0.8269634598723626,
+            "n": 468,
+            "fdr_p": 0.9424319067931424,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arms_diff_fat_mass",
+            "beta": -0.019916022305269433,
+            "abs_beta": 0.019916022305269433,
+            "p_value": 0.8356229573565863,
+            "n": 468,
+            "fdr_p": 0.9424319067931424,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_diff_bone_mass",
+            "beta": -0.019815817262536745,
+            "abs_beta": 0.019815817262536745,
+            "p_value": 0.8353913285509712,
+            "n": 468,
+            "fdr_p": 0.9424319067931424,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arms_diff_region_percent_fat",
+            "beta": -0.01752600311746407,
+            "abs_beta": 0.01752600311746407,
+            "p_value": 0.8538226402789454,
+            "n": 468,
+            "fdr_p": 0.9557716122525508,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_fat_free_mass",
+            "beta": -0.015841004733192846,
+            "abs_beta": 0.015841004733192846,
+            "p_value": 0.8679828050001348,
+            "n": 468,
+            "fdr_p": 0.957567121779894,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_diff_fat_free_mass",
+            "beta": -0.0158199630345624,
+            "abs_beta": 0.0158199630345624,
+            "p_value": 0.8681941904137706,
+            "n": 468,
+            "fdr_p": 0.957567121779894,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_android_total_mass",
+            "beta": 0.014675269327098651,
+            "abs_beta": 0.014675269327098651,
+            "p_value": 0.877150575831084,
+            "n": 468,
+            "fdr_p": 0.960383842150822,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_leg_left_fat_mass",
+            "beta": 0.01329732241612393,
+            "abs_beta": 0.01329732241612393,
+            "p_value": 0.888709928255879,
+            "n": 468,
+            "fdr_p": 0.9659890524520424,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_right_tissue_mass",
+            "beta": -0.008032443981089207,
+            "abs_beta": 0.008032443981089207,
+            "p_value": 0.9328500938520574,
+            "n": 468,
+            "fdr_p": 0.99326765121339,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arms_tissue_mass",
+            "beta": 0.007953543603631732,
+            "abs_beta": 0.007953543603631732,
+            "p_value": 0.9335404243810539,
+            "n": 468,
+            "fdr_p": 0.99326765121339,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_diff_tissue_mass",
+            "beta": 0.00714364948475998,
+            "abs_beta": 0.00714364948475998,
+            "p_value": 0.9410969178836288,
+            "n": 468,
+            "fdr_p": 0.99326765121339,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_diff_region_percent_fat",
+            "beta": -0.006520116390903506,
+            "abs_beta": 0.006520116390903506,
+            "p_value": 0.9453855868455682,
+            "n": 468,
+            "fdr_p": 0.99326765121339,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_trunk_right_tissue_percent_fat",
+            "beta": 0.006323427297341729,
+            "abs_beta": 0.006323427297341729,
+            "p_value": 0.9469151608234319,
+            "n": 468,
+            "fdr_p": 0.99326765121339,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_right_fat_mass",
+            "beta": -0.005295165207551521,
+            "abs_beta": 0.005295165207551521,
+            "p_value": 0.9558261642592375,
+            "n": 468,
+            "fdr_p": 0.9956522544367058,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_legs_tissue_mass",
+            "beta": -0.0017857065305754303,
+            "abs_beta": 0.0017857065305754303,
+            "p_value": 0.9850391243304015,
+            "n": 468,
+            "fdr_p": 0.9971142171947008,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_total_diff_total_mass",
+            "beta": 0.0012665871474030574,
+            "abs_beta": 0.0012665871474030574,
+            "p_value": 0.989410009361664,
+            "n": 468,
+            "fdr_p": 0.9971142171947008,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_leg_left_bone_mass",
+            "beta": 0.0011563023805907008,
+            "abs_beta": 0.0011563023805907008,
+            "p_value": 0.9903734277198093,
+            "n": 468,
+            "fdr_p": 0.9971142171947008,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_arm_right_fat_free_mass",
+            "beta": -0.00041408639873567526,
+            "abs_beta": 0.00041408639873567526,
+            "p_value": 0.9965676377194326,
+            "n": 468,
+            "fdr_p": 0.9971142171947008,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_legs_fat_mass",
+            "beta": 0.0003584222824647561,
+            "abs_beta": 0.0003584222824647561,
+            "p_value": 0.9970457650120567,
+            "n": 468,
+            "fdr_p": 0.9971142171947008,
+            "significant": false
+        },
+        {
+            "phenotype": "body_comp_legs_diff_fat_free_mass",
+            "beta": -0.0003453311756056235,
+            "abs_beta": 0.0003453311756056235,
+            "p_value": 0.9971142171947008,
+            "n": 468,
+            "fdr_p": 0.9971142171947008,
+            "significant": false
+        }
+    ]
+}

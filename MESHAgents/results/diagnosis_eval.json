@@ -1,0 +1,117 @@
+{
+  "confounders": [
+    "age",
+    "sex",
+    "bmi",
+    "weight",
+    "waist_circumference"
+  ],
+  "expert": [
+    "total_scan_vat_mass",
+    "total_scan_vat_volume",
+    "total_scan_sat_mass",
+    "body_comp_total_fat_mass",
+    "body_comp_android_fat_mass",
+    "body_comp_gynoid_fat_mass",
+    "body_comp_trunk_fat_mass",
+    "body_comp_total_lean_mass",
+    "body_comp_total_fat_free_mass",
+    "body_comp_android_region_percent_fat",
+    "body_comp_total_region_percent_fat",
+    "body_comp_legs_fat_mass",
+    "body_comp_arms_fat_mass",
+    "body_comp_total_bone_mass"
+  ],
+  "discovered": [
+    "body_comp_android_tissue_percent_fat",
+    "body_comp_total_fat_mass",
+    "body_comp_trunk_fat_mass",
+    "total_scan_vat_area",
+    "body_comp_android_fat_mass",
+    "body_comp_total_tissue_percent_fat",
+    "body_comp_trunk_region_percent_fat",
+    "total_scan_vat_mass",
+    "body_comp_android_region_percent_fat",
+    "total_scan_sat_mass",
+    "body_comp_arm_left_region_percent_fat",
+    "body_comp_arm_right_total_mass",
+    "body_comp_arms_fat_free_mass"
+  ],
+  "n_folds": 5,
+  "results": {
+    "diabetes": {
+      "LDA": {
+        "expert+conf": {
+          "auc_mean": 0.7397149999015883,
+          "auc_std": 0.04213227656234542,
+          "recall_mean": 0.6824236817761331,
+          "recall_std": 0.0590884038647292
+        },
+        "discovered+conf": {
+          "auc_mean": 0.7574527132088098,
+          "auc_std": 0.03306462582419875,
+          "recall_mean": 0.6908418131359851,
+          "recall_std": 0.04088408986902392
+        },
+        "random+conf": {
+          "auc_mean": 0.7197905800381836,
+          "auc_std": 0.03659438850048185,
+          "recall_mean": 0.6395004625346901,
+          "recall_std": 0.02434462046835289
+        },
+        "discovered_minus_expert": {
+          "d_auc": 0.017737713307221514,
+          "d_recall": 0.008418131359852032
+        }
+      },
+      "SVM": {
+        "expert+conf": {
+          "auc_mean": 0.7526541618280945,
+          "auc_std": 0.03076936737820861,
+          "recall_mean": 0.6818686401480111,
+          "recall_std": 0.07097060902774975
+        },
+        "discovered+conf": {
+          "auc_mean": 0.7633593796130455,
+          "auc_std": 0.026778642747898086,
+          "recall_mean": 0.6819611470860314,
+          "recall_std": 0.06898847166093505
+        },
+        "random+conf": {
+          "auc_mean": 0.7221308087468262,
+          "auc_std": 0.012488446093909877,
+          "recall_mean": 0.6562442183163737,
+          "recall_std": 0.05819223181687082
+        },
+        "discovered_minus_expert": {
+          "d_auc": 0.010705217784950927,
+          "d_recall": 9.250693802032028e-05
+        }
+      },
+      "AdaBoost": {
+        "expert+conf": {
+          "auc_mean": 0.710327317101974,
+          "auc_std": 0.034162090213485076,
+          "recall_mean": 0.6478260869565218,
+          "recall_std": 0.04155157933641091
+        },
+        "discovered+conf": {
+          "auc_mean": 0.7349203849863207,
+          "auc_std": 0.0496391536193797,
+          "recall_mean": 0.7037927844588344,
+          "recall_std": 0.05507823004281848
+        },
+        "random+conf": {
+          "auc_mean": 0.7001171098470683,
+          "auc_std": 0.0476137541992613,
+          "recall_mean": 0.6395004625346901,
+          "recall_std": 0.05987821966300115
+        },
+        "discovered_minus_expert": {
+          "d_auc": 0.024593067884346675,
+          "d_recall": 0.055966697502312646
+        }
+      }
+    }
+  }
+}

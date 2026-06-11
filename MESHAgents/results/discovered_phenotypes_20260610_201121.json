@@ -1,0 +1,14 @@
+{
+    "discovered_phenotypes": [],
+    "label": "diabetes",
+    "confounders": [
+        "age",
+        "sex",
+        "bmi",
+        "weight",
+        "waist_circumference"
+    ],
+    "n_phenotypes_tested": 0,
+    "n_significant_fdr": 0,
+    "table": []
+}

@@ -1,0 +1,53 @@
+{
+    "discovered_phenotypes": [
+        "body_comp_android_tissue_percent_fat",
+        "body_comp_arm_left_total_mass",
+        "body_comp_total_tissue_percent_fat",
+        "body_comp_trunk_fat_mass",
+        "total_scan_vat_area",
+        "body_comp_android_region_percent_fat",
+        "body_comp_total_region_percent_fat",
+        "body_comp_trunk_tissue_percent_fat",
+        "total_scan_vat_mass",
+        "body_comp_android_fat_mass",
+        "total_scan_vat_volume",
+        "body_comp_arm_right_fat_mass",
+        "body_comp_leg_left_lean_mass"
+    ],
+    "discovered_confounders": [],
+    "consensus": {
+        "discovered_phenotypes": [
+            "body_comp_android_tissue_percent_fat",
+            "body_comp_arm_left_total_mass",
+            "body_comp_total_tissue_percent_fat",
+            "body_comp_trunk_fat_mass",
+            "total_scan_vat_area",
+            "body_comp_android_region_percent_fat",
+            "body_comp_total_region_percent_fat",
+            "body_comp_trunk_tissue_percent_fat",
+            "total_scan_vat_mass",
+            "body_comp_android_fat_mass",
+            "total_scan_vat_volume",
+            "body_comp_arm_right_fat_mass",
+            "body_comp_leg_left_lean_mass"
+        ],
+        "rounds_run": 2,
+        "converged": true,
+        "top_associative_factor": "waist_circumference",
+        "discovered_confounders": []
+    },
+    "auto_phewas_metrics": {
+        "dependency_Q": 0.8642456463896615,
+        "coverage_C": 0.3055555555555556
+    },
+    "label": "diabetes",
+    "confounders_used": [
+        "age",
+        "sex",
+        "bmi",
+        "weight",
+        "waist_circumference"
+    ],
+    "n_significant_fdr": 13,
+    "n_phenotypes_tested": 150
+}

@@ -1,0 +1,71 @@
+{
+    "discovered_phenotypes": [
+        "body_comp_arm_left_region_percent_fat",
+        "body_comp_gynoid_region_percent_fat",
+        "body_comp_leg_left_tissue_mass",
+        "body_comp_trunk_region_percent_fat",
+        "total_scan_sat_mass",
+        "body_comp_gynoid_fat_free_mass",
+        "body_comp_trunk_total_mass",
+        "body_comp_android_fat_mass",
+        "body_comp_arm_right_region_percent_fat",
+        "body_comp_arms_fat_free_mass",
+        "body_comp_leg_right_fat_free_mass",
+        "body_comp_legs_tissue_mass",
+        "body_comp_dose"
+    ],
+    "discovered_confounders": [
+        "weight",
+        "sex",
+        "height",
+        "hip_circumference",
+        "waist_circumference",
+        "bmi",
+        "age"
+    ],
+    "consensus": {
+        "discovered_phenotypes": [
+            "body_comp_arm_left_region_percent_fat",
+            "body_comp_gynoid_region_percent_fat",
+            "body_comp_leg_left_tissue_mass",
+            "body_comp_trunk_region_percent_fat",
+            "total_scan_sat_mass",
+            "body_comp_gynoid_fat_free_mass",
+            "body_comp_trunk_total_mass",
+            "body_comp_android_fat_mass",
+            "body_comp_arm_right_region_percent_fat",
+            "body_comp_arms_fat_free_mass",
+            "body_comp_leg_right_fat_free_mass",
+            "body_comp_legs_tissue_mass",
+            "body_comp_dose"
+        ],
+        "rounds_run": 2,
+        "converged": true,
+        "top_associative_factor": "age",
+        "discovered_confounders": [
+            "weight",
+            "sex",
+            "height",
+            "hip_circumference",
+            "waist_circumference",
+            "bmi",
+            "age"
+        ]
+    },
+    "auto_phewas_metrics": {
+        "dependency_Q": 0.8828139699154214,
+        "coverage_C": 0.4294871794871795
+    },
+    "label": "diabetes",
+    "confounders_used": [
+        "weight",
+        "sex",
+        "height",
+        "hip_circumference",
+        "waist_circumference",
+        "bmi",
+        "age"
+    ],
+    "n_significant_fdr": 0,
+    "n_phenotypes_tested": 150
+}

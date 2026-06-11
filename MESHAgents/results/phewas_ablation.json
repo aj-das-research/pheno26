@@ -1,0 +1,71 @@
+[
+  {
+    "config": "full",
+    "ablation": null,
+    "discovered": [
+      "body_comp_android_tissue_percent_fat",
+      "body_comp_total_fat_mass",
+      "body_comp_trunk_fat_mass",
+      "total_scan_vat_area",
+      "body_comp_android_fat_mass",
+      "body_comp_total_tissue_percent_fat",
+      "body_comp_trunk_region_percent_fat",
+      "total_scan_vat_mass",
+      "body_comp_android_region_percent_fat",
+      "body_comp_total_region_percent_fat",
+      "body_comp_trunk_tissue_percent_fat",
+      "total_scan_sat_mass",
+      "body_comp_arm_left_region_percent_fat"
+    ],
+    "dependency_Q": 0.46472566508018254,
+    "coverage_C": 0.27031908488862133,
+    "rounds_run": 2,
+    "converged": true
+  },
+  {
+    "config": "w/o Stage III",
+    "ablation": "no_stage3",
+    "discovered": [
+      "body_comp_android_tissue_percent_fat",
+      "body_comp_total_fat_mass",
+      "body_comp_trunk_fat_mass",
+      "total_scan_vat_area",
+      "body_comp_android_fat_mass",
+      "body_comp_total_tissue_percent_fat",
+      "body_comp_trunk_region_percent_fat",
+      "total_scan_vat_mass",
+      "body_comp_android_region_percent_fat",
+      "body_comp_total_region_percent_fat",
+      "body_comp_trunk_tissue_percent_fat",
+      "total_scan_sat_mass",
+      "body_comp_arm_left_region_percent_fat"
+    ],
+    "dependency_Q": 0.46472566508018254,
+    "coverage_C": 0.27031908488862133,
+    "rounds_run": 1,
+    "converged": false
+  },
+  {
+    "config": "w/o Mem. & Tool",
+    "ablation": "no_mem_tools",
+    "discovered": [
+      "body_comp_android_tissue_percent_fat",
+      "body_comp_arm_left_region_percent_fat",
+      "body_comp_arm_right_total_mass",
+      "body_comp_arms_fat_free_mass",
+      "body_comp_gynoid_fat_free_mass",
+      "body_comp_leg_left_total_mass",
+      "body_comp_leg_right_region_percent_fat",
+      "body_comp_legs_tissue_mass",
+      "body_comp_dose",
+      "body_comp_total_fat_mass",
+      "body_comp_trunk_fat_mass",
+      "total_scan_vat_area",
+      "body_comp_android_fat_mass"
+    ],
+    "dependency_Q": 0.8638091870525206,
+    "coverage_C": 0.5397350993377483,
+    "rounds_run": 2,
+    "converged": true
+  }
+]

@@ -1,0 +1,31 @@
+# ---- secrets: NEVER commit ----
+.env
+*.env
+**/.env
+!.env.example
+!**/.env.example
+
+# ---- python / virtualenv ----
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+**/.venv/
+venv/
+env/
+ENV/
+*.so
+
+# ---- logs ----
+*.log
+**/logs/
+
+# ---- large, regenerable pipeline outputs (figures + small summaries ARE kept) ----
+MESHAgents/results/analysis_results_*.json
+MESHAgents/results/*_analysis_*.json
+MESHAgents/results/consensus_transcript_*.json
+
+# ---- OS / editor cruft ----
+.DS_Store
+.ipynb_checkpoints/
+.idea/

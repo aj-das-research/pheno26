@@ -1,0 +1,42 @@
+{
+  "discovered": [
+    "body_comp_android_tissue_percent_fat",
+    "body_comp_total_fat_mass",
+    "body_comp_trunk_fat_mass",
+    "total_scan_vat_area",
+    "body_comp_android_fat_mass",
+    "body_comp_total_tissue_percent_fat",
+    "body_comp_trunk_region_percent_fat",
+    "total_scan_vat_mass",
+    "body_comp_android_region_percent_fat",
+    "total_scan_sat_mass",
+    "body_comp_arm_left_region_percent_fat",
+    "body_comp_arm_right_total_mass",
+    "body_comp_arms_fat_free_mass"
+  ],
+  "expert": [
+    "total_scan_vat_mass",
+    "total_scan_vat_volume",
+    "total_scan_sat_mass",
+    "body_comp_total_fat_mass",
+    "body_comp_android_fat_mass",
+    "body_comp_gynoid_fat_mass",
+    "body_comp_trunk_fat_mass",
+    "body_comp_total_lean_mass",
+    "body_comp_total_fat_free_mass",
+    "body_comp_android_region_percent_fat",
+    "body_comp_total_region_percent_fat",
+    "body_comp_legs_fat_mass",
+    "body_comp_arms_fat_mass",
+    "body_comp_total_bone_mass"
+  ],
+  "overlap": [
+    "body_comp_android_fat_mass",
+    "body_comp_android_region_percent_fat",
+    "body_comp_total_fat_mass",
+    "body_comp_trunk_fat_mass",
+    "total_scan_sat_mass",
+    "total_scan_vat_mass"
+  ],
+  "jaccard": 0.2857142857142857
+}

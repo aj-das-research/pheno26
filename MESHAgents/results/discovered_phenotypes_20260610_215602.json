@@ -1,0 +1,74 @@
+{
+    "discovered_phenotypes": [
+        "body_comp_android_tissue_percent_fat",
+        "body_comp_total_fat_mass",
+        "body_comp_trunk_fat_mass",
+        "total_scan_vat_area",
+        "body_comp_android_fat_mass",
+        "body_comp_total_tissue_percent_fat",
+        "body_comp_trunk_region_percent_fat",
+        "total_scan_vat_mass",
+        "body_comp_android_region_percent_fat",
+        "total_scan_sat_mass",
+        "body_comp_arm_left_region_percent_fat",
+        "body_comp_arm_right_total_mass",
+        "body_comp_arms_fat_free_mass"
+    ],
+    "discovered_confounders": [
+        "weight",
+        "sex",
+        "height",
+        "waist_circumference",
+        "bmi",
+        "age",
+        "hip_circumference",
+        "waist_to_hip_ratio"
+    ],
+    "consensus": {
+        "discovered_phenotypes": [
+            "body_comp_android_tissue_percent_fat",
+            "body_comp_total_fat_mass",
+            "body_comp_trunk_fat_mass",
+            "total_scan_vat_area",
+            "body_comp_android_fat_mass",
+            "body_comp_total_tissue_percent_fat",
+            "body_comp_trunk_region_percent_fat",
+            "total_scan_vat_mass",
+            "body_comp_android_region_percent_fat",
+            "total_scan_sat_mass",
+            "body_comp_arm_left_region_percent_fat",
+            "body_comp_arm_right_total_mass",
+            "body_comp_arms_fat_free_mass"
+        ],
+        "rounds_run": 2,
+        "converged": true,
+        "top_associative_factor": "weight",
+        "discovered_confounders": [
+            "weight",
+            "sex",
+            "height",
+            "waist_circumference",
+            "bmi",
+            "age",
+            "hip_circumference",
+            "waist_to_hip_ratio"
+        ]
+    },
+    "auto_phewas_metrics": {
+        "dependency_Q": 0.6218685563739765,
+        "coverage_C": 0.3612281757977122
+    },
+    "label": "diabetes",
+    "confounders_used": [
+        "weight",
+        "sex",
+        "height",
+        "waist_circumference",
+        "bmi",
+        "age",
+        "hip_circumference",
+        "waist_to_hip_ratio"
+    ],
+    "n_significant_fdr": 12,
+    "n_phenotypes_tested": 150
+}
