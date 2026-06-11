@@ -15,13 +15,12 @@ Analysis*, MICCAI 2025) from single-organ cardiac imaging to **whole-body phenot
 ## Quickstart
 
 ```bash
-cd MESHAgents
-uv venv --python 3.10 .venv && source .venv/bin/activate
-uv pip install --python .venv/bin/python pandas numpy scipy statsmodels scikit-learn \
-  seaborn matplotlib python-dotenv pyarrow "openai>=1.0.0"
-cp .env.example .env          # then add your OpenAI key (never commit .env)
+# 1) one-command environment setup (creates ./.venv in the project root)
+./setup.sh
+source .venv/bin/activate
+# edit .env and add your OPENAI_API_KEY (it was seeded from .env.example; .env is gitignored)
 
-cd ..
+# 2) build the synthetic dataset
 python make_synthetic.py                         # synthetic HPP-schema parquet tables
 python build_merged_data.py --disease diabetes   # -> MESHAgents/data/merged_data.csv
 
